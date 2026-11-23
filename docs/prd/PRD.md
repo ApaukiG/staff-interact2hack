@@ -1,6 +1,8 @@
 # PRD · Herramienta de organización del staff del Interact2Hack
 
-**Fuentes:** docs/fuentes/descripcion-proyecto.md · docs/cliente/preguntas.md (respuestas del cliente, 11 de noviembre de 2026)
+**Fuentes:** docs/cliente/preguntas.md (respuestas del cliente, 11 de noviembre de 2026).
+
+> **Nota:** este PRD no se basó en la descripción del proyecto de D2L, que no estaba disponible en `docs/fuentes/`. Se construyó solo con las preguntas del avance 1 y las respuestas del cliente.
 
 ## 1. Problema y contexto
 

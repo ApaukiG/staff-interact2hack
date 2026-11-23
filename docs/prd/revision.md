@@ -1,16 +1,18 @@
 # Revisión del PRD
 
 **Equipo:** Pedro Apauki Guandinango Vinueza · **Fecha:** 23 de noviembre de 2026
-**Fuentes:** docs/fuentes/descripcion-proyecto.md y docs/cliente/preguntas.md
+**Fuentes:** docs/cliente/preguntas.md (respuestas del cliente del 11 de noviembre).
+
+> **Nota:** no contamos con la descripción del proyecto de D2L en `docs/fuentes/`. El PRD y esta revisión se hicieron solo con las preguntas del avance 1 y las respuestas del cliente.
 
 ## Huecos
 
 | # | Sección | Frase exacta del PRD | Tipo (1–8) | Gravedad | Origen | Qué dicen las fuentes | Corrección |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | 6. Reglas | «R6. Una tarea pasa a "En ejecución" cuando el staff la abre.» | 4 · Contradicción resuelta en silencio | alta | IA | P-01 dice «cuando tú abres la tarea», pero P-20 lo corrige: «cuando le haces el primer check», porque el staff puede abrirla solo para verla. | R6: pasa a «En ejecución» cuando el staff marca el primer ítem del checklist. Abrirla para verla no cambia el estado. |
-| 2 | 6. Reglas | «R12. Una tarea está "por vencer" cuando está próxima a su vencimiento» | 2 · Regla vaga o sin cifra | alta | IA | P-33: «si falta menos de una hora». | R12: está «por vencer» cuando falta menos de 1 hora para su vencimiento y no está completada. |
+| 2 | 6. Reglas | «R12. Una tarea está "por vencer" cuando está próxima a su vencimiento» | 2 · Regla vaga o sin cifra | alta | Equipo | P-33: «si falta menos de una hora». | R12: está «por vencer» cuando falta menos de 1 hora para su vencimiento y no está completada. |
 | 3 | 6. Reglas | «R20. Si no hay conexión, el sistema guarda los cambios localmente y los sincroniza después.» | 1 · Supuesto escrito como hecho | alta | IA | P-39: guardar localmente y sincronizar «sería muy complicado por ahora». Solo avisar «no tienes internet» o deshabilitar el botón de guardar. | R20: sin conexión, el sistema avisa «No tienes conexión» y no permite guardar. No hay modo offline. |
-| 4 | 6. Reglas | «R21. … en la tabla `tasks` con un campo `deleted_at`.» | 7 · Detalle técnico | media | IA | P-41: no se borran, solo se marcan como eliminados. La tabla y el campo son decisiones técnicas. | R21: eliminar una tarea no la borra del registro; queda marcada como eliminada y deja de mostrarse. |
+| 4 | 6. Reglas | «R21. … en la tabla `tasks` con un campo `deleted_at`.» | 7 · Detalle técnico | media | Equipo | P-41: no se borran, solo se marcan como eliminados. La tabla y el campo son decisiones técnicas. | R21: eliminar una tarea no la borra del registro; queda marcada como eliminada y deja de mostrarse. |
 | 5 | 9. Trazabilidad | La tabla termina en R19; faltan R20 y R21. | 8 · Regla sin trazabilidad | media | IA | P-39 sostiene R20 y P-41 sostiene R21. | Agregar R20 → P-39 y R21 → P-41, y las reglas nuevas. |
 | 6 | 3. Objetivos | «el 100 % de las tareas del evento se gestionan en la app y el staff la usa fácilmente.» | 2 · Regla vaga / 1 · Supuesto | media | IA | Las fuentes no dan una meta en cifras. P-22 solo dice «no usar tanto el grupo de WhatsApp». «Fácilmente» no es comprobable. | Pasa a supuestos con métrica propuesta y se pregunta al cliente. |
 | 7 | 4. Alcance · Could | «Notificaciones push al celular.» | 3 · Alcance inflado / 1 · Supuesto | baja | IA | P-32: los avisos van «dentro de la app, en la parte superior». Las fuentes no piden push. | Se mueve a Won't: los avisos son solo dentro de la app. |
@@ -36,7 +38,7 @@
    - **Qué decía el PRD:** «próxima a su vencimiento».
    - **Por qué era un problema:** no se puede probar.
    - **Cómo quedó:** menos de 1 hora, como dijo el cliente (P-33).
-   - **Quién lo encontró:** IA.
+   - **Quién lo encontró:** Equipo.
 
 ## Preguntas para el cliente
 
