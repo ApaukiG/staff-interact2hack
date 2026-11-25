@@ -230,11 +230,11 @@ Tres destinos: Mis tareas, Historial, Cuenta. Texto en `--texto-pequeno` 600 e i
 
 ### 7.13 Indicador del tablero (Resumen del tablero)
 
-Fila de cinco paneles arriba del tablero, uno por grupo de R13: Vencidas, Por vencer, En ejecución, Sin asignar, Completadas. Cada panel: número en `--texto-cifra` y nombre en `--texto-kicker`. El panel de Vencidas lleva relleno `--color-vencida` si el número es mayor que 0; si es 0, dice «Sin tareas vencidas». Los demás solo con borde.
+Fila de paneles arriba del tablero, uno por grupo de §7.14: Vencidas, Por vencer, En ejecución, Sin asignar, Pendientes y Completadas. Cada panel: número en `--texto-cifra` y nombre en `--texto-kicker`. El panel de Vencidas lleva relleno `--color-vencida` si el número es mayor que 0; si es 0, dice «Sin tareas vencidas». Los demás solo con borde.
 
 ### 7.14 Fila del tablero (escritorio)
 
-Tabla con `caption` «Tablero de tareas, ordenado por prioridad» (A-14). Columnas: Vence (`--texto-tarjeta`), Tarea, Lugar, Responsables, Estado (Insignia + Marca de tiempo) y Acción. Barra izquierda de `--borde-estado` en el color del estado. Las filas van agrupadas con un título de grupo y su contador, en el orden de R13: vencidas, por vencer, en ejecución, sin asignar y completadas; dentro de cada grupo, la que vence primero arriba (C-13). Una fila en edición muestra la marca «En edición por …» y su botón «Editar» queda deshabilitado (R17).
+Tabla con `caption` «Tablero de tareas, ordenado por prioridad» (A-14). Columnas: Vence (`--texto-tarjeta`), Tarea, Lugar, Responsables, Estado (Insignia + Marca de tiempo) y Acción. Barra izquierda de `--borde-estado` en el color del estado. Las filas van agrupadas con un título de grupo y su contador, en el orden de R13: vencidas, por vencer, en ejecución, sin asignar y completadas. R13 no menciona las pendientes: van en un grupo «Pendientes» entre «Sin asignar» y «Completadas» `[SUPUESTO S-D4]`. Dentro de cada grupo, la que vence primero arriba (C-13). Una tarea en ejecución o pendiente a la que le falta menos de 1 hora va en «Por vencer». Una fila en edición muestra la marca «En edición por …» y su botón «Editar» queda deshabilitado (R17).
 
 ### 7.15 Estados de pantalla
 
@@ -323,7 +323,7 @@ Además:
 | D-05 | La hora de vencimiento y el lugar se ven a 360 px. | Vista de celular de «Mis tareas»: cada tarjeta muestra la hora y el lugar sin cortarse. |
 | D-06 | Hay como máximo un bloque morado sólido por pantalla. | Revisar «Mis tareas», el detalle y el tablero: cuenta de elementos con fondo `--color-acento` ≤ 1. |
 | D-07 | La tarjeta señal muestra la tarea correcta. | Con datos de prueba (una en ejecución, una vencida, una pendiente), la señal muestra la en ejecución; sin ella, la vencida. |
-| D-08 | El tablero ordena vencidas, por vencer, en ejecución, sin asignar y completadas. | Con datos de prueba de los cinco grupos, el orden en pantalla es ese y cada grupo tiene título y contador. |
+| D-08 | El tablero ordena vencidas, por vencer, en ejecución, sin asignar, pendientes y completadas. | Con datos de prueba de los seis grupos, el orden en pantalla es ese y cada grupo tiene título y contador. |
 | D-09 | El checklist usa casillas reales. | En las herramientas del navegador, cada paso es un `input type="checkbox"` con `label`, dentro de un `fieldset` con `legend`. |
 | D-10 | No se puede finalizar sin todos los pasos. | Con 2 de 4 pasos marcados, «Desliza para finalizar» está deshabilitado y muestra el motivo. |
 | D-11 | Todo elemento interactivo tiene foco visible. | Recorrer la pantalla con Tab: cada elemento muestra el anillo lima. |
@@ -339,3 +339,4 @@ Además:
 | S-D1 | Se agregan ámbar `#FFB547` y coral `#FF6B5E` a la paleta de la marca. | «Señal Neón» no tiene colores de advertencia ni de error, y el PRD necesita «por vencer» y «vencida» (C-8). | `[SUPUESTO]` · validar con el cliente en el Avance 3 |
 | S-D2 | Se agrega un borde de control al 40 % de blanco (`#69686A`). | El borde de la marca (14 %) no cumple 3:1 (A-2). | `[SUPUESTO]` · validar con el cliente en el Avance 3 |
 | S-D3 | La tarjeta señal elige la tarea en ejecución y, si no hay, la que vence primero. | El cliente no definió qué va primero para el staff; se sigue el orden del tablero (R13, C-2). | `[SUPUESTO]` · validar con el cliente en el Avance 3 |
+| S-D4 | Las tareas pendientes van en un grupo propio del tablero, entre «Sin asignar» y «Completadas». | R13 (P-34) no las menciona, pero son la mayoría de las tareas durante el evento y el tablero debe mostrarlas todas. | `[SUPUESTO]` · validar con el cliente en el Avance 3 |
