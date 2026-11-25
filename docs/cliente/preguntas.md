@@ -32,7 +32,7 @@
 | P-23 | ¿El administrador puede editar una tarea que ya se está haciendo? | «Si está en ejecución, no. El rato que ya entras a ejecutar ya no debería cambiar. Se queda bloqueada y no se la puede ni borrar ni editar.» |
 | P-24 | ¿Qué pasa si dos administradores editan la misma tarea a la vez? | «No debería poder editarse dos veces en simultáneo. Uno de los dos admins empieza a editar la tarea, el otro admin no debería poder editar.» |
 | P-25 | ¿Quién ve qué tareas? | «Yo puedo ver todas las tareas como administrador, las mías o las de los otros organizadores. Los estudiantes solo ven las tareas que les asignan.» |
-| P-26 | ¿El lugar es texto libre o una lista? | Una lista precargada, no texto libre. Seguros: Casa Blanca, Salón Azul, el de Da Vinci, Paterno de la Barca y el Teatro Shakespeare. Debe haber una opción en la administración para crear aulas u otros lugares. |
+| P-26 | ¿El lugar es texto libre o una lista? | Una lista precargada, no texto libre. Seguros: Casa Blanca, Salón Azul, el de Da Vinci, el Teatro Calderón de la Barca y el Teatro Shakespeare. Debe haber una opción en la administración para crear aulas u otros lugares. |
 | P-27 | ¿Qué pasa con las tareas completadas? | Una pestaña de completadas en el tablero general. «Mejor no borrarlas, necesitamos que queden como registro.» |
 | P-28 | ¿Se registra la disponibilidad del staff? | Sí: al crear el usuario, el administrador indica qué días y horas está disponible. Al asignar, solo se ven los disponibles en ese horario. Si alguien no puede ir, avisa fuera del sistema y el administrador cambia su disponibilidad. |
 | P-29 | ¿Puede un estudiante salir de una tarea en ejecución para hacer otra? | «Creo que es mejor bloquear: si arrancas la tarea, tienes que terminar.» Si sobra gente asignada, se pide a un organizador que edite la tarea. |
@@ -53,3 +53,46 @@
 
 - Detalle de la «presencia» o asistencia del staff durante el evento (la respuesta se mezcla con la pregunta de internet).
 - Cuántos administradores habrá y cómo se reparten el trabajo («no sé muy bien cómo nos vamos a organizar por ahora»).
+
+## Estado de los supuestos del Avance 1
+
+En el documento del Avance 1 cada pregunta tenía un supuesto: lo que haría si el cliente no respondía. Después de la reunión, cada uno quedó así:
+
+- **Confirmado:** el cliente dijo lo mismo.
+- **Descartado:** el cliente decidió otra cosa.
+- **Pendiente:** no se habló en la reunión o la respuesta no quedó clara.
+
+Ojo: los Id de la primera columna son los de mi documento del Avance 1; los de la última columna son los de la tabla de respuestas de arriba.
+
+| Id (Avance 1) | Mi supuesto | Estado | Respuesta que lo resuelve |
+| --- | --- | --- | --- |
+| P-01 | Cada usuario tiene un solo perfil. | Confirmado | P-13, P-38 |
+| P-02 | Un administrador puede gestionar a cualquier usuario, excepto eliminarse a sí mismo. | Pendiente | No se habló. Sí quedó claro que hay un súper administrador inicial (P-15). |
+| P-03 | El usuario eliminado se desactiva y su nombre se conserva en las tareas. | Confirmado | P-41: nada se borra, solo se marca como eliminado. |
+| P-04 | Datos del usuario: nombre, correo y perfil. | Descartado | P-08 y P-28: también teléfono y disponibilidad. |
+| P-05 | Al crear la cuenta le llega un correo con un enlace para crear su contraseña. | Descartado | P-07 y P-18: el administrador pone la contraseña inicial y se envía por correo; el usuario la cambia después. |
+| P-06 | El usuario recupera su contraseña solo, por correo. | Confirmado | P-16 |
+| P-07 | Título obligatorio y descripción opcional. | Confirmado en parte | P-17 confirma el título. La descripción no se mencionó: pendiente. |
+| P-08 | El lugar se elige de una lista fija que mantiene el administrador. | Confirmado | P-26 |
+| P-09 | Si el administrador edita el checklist, los pasos marcados se conservan. | Descartado | P-23: una tarea en ejecución no se puede editar. |
+| P-10 | Una tarea completada no se edita ni se elimina. | Confirmado | P-27. Quién puede reabrirla quedó pendiente. |
+| P-11 | Basta con marcar el check; no hay evidencia. | Confirmado en parte | P-06: la evidencia es opcional («nice to have»). |
+| P-12 | Habrá una opción para duplicar tareas. | Pendiente | No se habló. |
+| P-13 | Varios responsables comparten un solo checklist y se registra quién marcó cada paso. | Confirmado en parte | P-03 y P-14: basta con que uno la complete; se registra quién la ejecutó, no cada paso. |
+| P-14 | Basta con que un responsable la confirme. | Confirmado | P-03 |
+| P-15 | Solo el administrador cambia los responsables. | Confirmado | P-29: si sobra gente, se pide a un organizador que edite la tarea. |
+| P-16 | No se validan choques de horario. | Descartado | P-28: al asignar solo aparece el staff disponible en ese horario. |
+| P-17 | Cuatro estados: pendiente, en progreso, completada y vencida. | Descartado | P-20 y P-24: se suma «no asignada»; «en ejecución» empieza con el primer check; hay bloqueo de edición. |
+| P-18 | Guardar conserva el avance parcial. | Pendiente | P-05 solo dice que no se puede finalizar sin todos los checks. |
+| P-19 | La tarea queda cerrada con la confirmación del staff, sin aprobación. | Confirmado | P-35: doble confirmación, sin aprobación del administrador. |
+| P-20 | Solo el administrador puede reabrir una tarea. | Pendiente | No se habló. |
+| P-21 | «Próxima a vencer» = 1 hora antes. | Confirmado | P-33 |
+| P-22 | El tablero muestra conteos, por vencer y vencidas. | Confirmado en parte | P-34 define el orden; P-27 agrega la pestaña de completadas. |
+| P-23 | Una tarea vencida se puede completar y queda como tardía. | Descartado | P-02: queda «vencida» y el administrador la reasigna o cambia la fecha. |
+| P-24 | Solo aviso visual dentro de la app, sin correos. | Confirmado | P-32 |
+| P-25 | Staff en celular, administradores en computadora. | Confirmado | P-36 |
+| P-26 | Unos 30 estudiantes, 5 administradores y 50–100 tareas por día. | Pendiente | No se dieron cifras. |
+| P-27 | Se necesita conexión; la app avisa si algo no se guardó. | Confirmado | P-39 |
+| P-28 | Uso el logo si existe y propongo la paleta y la tipografía. | Descartado | P-10: se sigue la identidad visual del Interact2Hack (brandboard «Señal Neón»). |
+| P-29 | Solo esta edición; no se separan eventos. | Pendiente | No se habló. |
+| P-30 | Chat, correos, reportes y app instalable quedan fuera. | Confirmado en parte | P-09 (sin chat) y P-32 (sin correos). Reportes y app instalable no se hablaron. |
